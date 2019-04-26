@@ -1,0 +1,37 @@
+<h1>Create customer</h1>
+<form method="post" action="/create">
+    <input type="text" name="name" placeholder="name" />
+    <input type="text" name="address" placeholder="address" />
+    <input type="text" name="phone" placeholder="phone" />
+    <input type="submit">
+</form>
+
+<h1>Get Customer</h1>
+<ul>
+    {{#each clientes}}
+        <li>{{this.id}},{{this.name}}, {{this.address}}</li>
+    {{/each}}
+</ul>
+
+<h1>Update Customer</h1>
+<form method="post" action="/update">
+    <input type="text" name="id" placeholder="id" />
+     <input type="text" name="name" placeholder="new name" />
+    <input type="text" name="address" placeholder="new address" />
+    <input type="text" name="phone" placeholder="new phone" />
+    <input type="submit">
+</form>
+
+<h1>Delete Customer</h1>
+<form method="post" action="/delete">
+    <input type="text" name="id" placeholder="id" />
+    <input type="submit">
+</form>
+
+<h1>Busqueda Customer</h1>
+<form method="post" action="/search">
+    <input type="text" name="buscar" placeholder="nombre" />
+     
+    <input type="submit">
+</form>
+
